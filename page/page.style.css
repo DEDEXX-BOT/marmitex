@@ -1,0 +1,137 @@
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #F5CB58;
+    font-family: 'League Spartan', sans-serif;
+    overflow: auto;
+    overflow-x: hidden;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+body.saindo-direita {
+    transform: translateX(100%);
+    opacity: 0.8;
+}
+
+.img_pizza {
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    filter: contrast(1.2);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.fundo-branco {
+    background-color: white;
+    margin-top: -60px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 30px 20px 40px 20px;
+    position: relative;
+    z-index: 1;
+    min-height: 300px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.btn-voltar {
+    position: absolute;
+    top: 360px;
+    left: 30px;
+    background: none;
+    border: none;
+    color: #e95322;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 3;
+    outline: none;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+}
+
+p {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 20px;
+    margin-top: 33px;
+}
+
+.bem-vindo_page {
+    font-size: 32px;
+    font-weight: 800;
+    color: #e95322;
+    text-align: center;
+    width: 100%;
+    font-family: 'League Spartan', sans-serif;
+    margin-bottom: 10px;
+}
+
+.descriçao_page {
+    font-size: 40px;
+    color: #666666;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-family: 'League Spartan', sans-serif;
+    line-height: 2.5;
+}
+
+.btn-proximo {
+    background-color: #e95322;
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    outline: none;
+    display: block;
+    width: fit-content;
+}
+
+.btn-proximo:focus,
+.btn-voltar:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+button,
+button:focus,
+button:active {
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #e95322;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+}

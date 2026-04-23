@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Conta | Marmitex</title>
+    <link rel="stylesheet" href="/cadastro/cadastro.style.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <button class="botao-voltar" id="btn-voltar2" type="button" aria-label="Voltar para a pagina inicial">&#8249;</button>
+
+    <section class="fundo-branco">
+        <h1 class="bem_vindo">Nova Conta</h1>
+
+        <p class="subtitulo">
+            Crie sua conta para comecar a pedir a melhor marmita da cidade.
+        </p>
+
+        <form id="cadastro-form">
+            <label class="numero_ou_email" for="input-nome">Nome completo</label>
+            <input class="input_campo" id="input-nome" type="text" placeholder="Digite seu nome completo" required>
+
+            <label class="numero_ou_email" for="input-email">Email</label>
+            <input class="input_campo" id="input-email" type="email" placeholder="example@example.com" required>
+
+            <span class="senha_bem_vindo">Senha</span>
+            <div class="campo_senha_wrapper">
+                <input type="password" class="input_campo" id="input-senha" placeholder="************" required>
+                <span class="icone_olho" id="icone-olho">
+                    <i class="fa-regular fa-eye-slash"></i>
+                </span>
+            </div>
+
+            <div class="container__ver_senha">
+                <span class="ver_senha" id="ver-senha-texto">Ver Senha</span>
+            </div>
+
+            <label class="numero_ou_email" for="input-telefone">Numero</label>
+            <div class="telefone_wrapper">
+                <span class="telefone_prefixo" aria-hidden="true">+55</span>
+                <input
+                    class="input_campo input_telefone"
+                    id="input-telefone"
+                    type="tel"
+                    inputmode="numeric"
+                    maxlength="15"
+                    placeholder="(00) 00000-0000"
+                    required
+                >
+            </div>
+
+            <label class="numero_ou_email" for="input-nascimento">Nascimento</label>
+            <input
+                class="input_campo"
+                id="input-nascimento"
+                type="text"
+                inputmode="numeric"
+                maxlength="10"
+                placeholder="dd/mm/yyyy"
+                required
+            >
+
+            <button class="button_login" type="submit">Salvar</button>
+        </form>
+
+        <div class="outros_login">
+            <span class="outros_texto">ou cadastre-se com</span>
+
+            <div class="outros_icones">
+                <button type="button" class="icone_social" aria-label="Cadastrar com Google" data-em-breve>
+                    <img class="icone_social_img" src="/img/google.png" alt="Google">
+                </button>
+                <button type="button" class="icone_social" aria-label="Cadastrar com Facebook" data-em-breve>
+                    <img class="icone_social_img" src="/img/face.png" alt="Facebook">
+                </button>
+                <button type="button" class="icone_social" aria-label="Cadastrar com Instagram" data-em-breve>
+                    <img class="icone_social_img" src="/img/insta.png" alt="Instagram">
+                </button>
+            </div>
+        </div>
+
+        <p class="criar_conta">
+            Ja tem uma conta? <span onclick="irParaLogin()">Iniciar sessao</span>
+        </p>
+    </section>
+
+    <script src="/script.js"></script>
+</body>
+</html>

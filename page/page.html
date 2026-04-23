@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARMITEX</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/page/page.style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/img/pizza_page1.jpg" alt="imagem de pizza" class="img_pizza">
+
+        <div class="fundo-branco">
+            <div class="bem-vindo_page">Bem-vindo</div>
+            <p>Comida caseira, saborosa e com preço justo, feita para o seu dia a dia. No marmitex, você encontra refeições acessíveis perto de você, com qualidade, praticidade e aquele gostinho de comida de verdade.</p>
+
+            <button class="btn-proximo" id="btn-proximo" type="button" onclick="window.location.href='/page/page2.html'" aria-label="Ir para a proxima pagina">
+                Próximo
+            </button>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+
+    <button id="scrollToTopBtn" title="Voltar ao topo">&uarr;</button>
+
+    <script>
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function() { scrollFunction(); };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        scrollToTopBtn.onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body {
+    width: min(100%, 390px);
+    margin: 0 auto;
+    padding-bottom: 90px;
+    font-family: 'League Spartan', sans-serif;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* CARD */
+.card {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* EFEITO */
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* IMAGEM (CORRIGIDA) */
+.imagem-doces {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* CONTEÚDO */
+.card-content {
+    margin-left: 12px;
+}
+
+/* TÍTULO */
+.card-content h1 {
+    font-size: 15px;
+    margin: 0;
+    color: #333;
+    font-weight: 700;
+}
+
+/* PREÇO */
+.card-content p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff4d00;
+    margin-top: 6px;
+}

@@ -1,0 +1,279 @@
+/* ===== BODY ===== */
+body {
+    background-color: #F5CB58;   /* fundo amarelo apenas no topo */
+    margin: 0;                   /* remove margens padrão */
+    height: 100vh;               /* ocupa toda a altura da tela */
+    overflow: auto;
+    padding-top: 70px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ===== CARD ===== */
+.card {
+    background-color: transparent; /* deixa transparente */
+    width: 100%;                   /* ocupa toda a largura */
+    box-shadow: none;              /* sem sombra */
+}
+
+/* ===== CAIXA BRANCA PRINCIPAL ===== */
+.fundo-branco {
+    background-color: #ffffff;                  /* fundo branco */
+    width: 100%;                                /* ocupa toda largura da tela */
+    min-height: calc(100vh - 70px);                               /* ocupa toda altura da tela */
+    border-radius: 30px 30px 0 0;              /* arredondado só em cima */
+    box-shadow: 0px -4px 10px rgba(0,0,0,0.1); /* sombra só no topo */
+    display: flex;                              /* ativa flexbox */
+    flex-direction: column;                     /* itens empilhados */
+    align-items: flex-start;                    /* alinha conteúdo à esquerda */
+    padding: 35px 20px;                          /* espaço interno */
+    margin: 0;                             /* centraliza horizontalmente */
+    overflow-y: auto;
+    scrollbar-width: none;                    /* Firefox: esconde scrollbar */
+    box-sizing: border-box;                   /* inclui padding dentro da largura */
+
+}
+
+.fundo-branco::-webkit-scrollbar {
+    display: none;                           /* Chrome/Safari: esconde scrollbar */
+}
+
+/* ===== TÍTULO BEM-VINDO ===== */
+.bem_vindo {
+    font-size: 28px;                            /* texto grande */
+    color: #000000;                             /* preto */
+    margin-bottom: 8px;                         /* espaço pequeno abaixo */
+    font-weight: bold;                          /* negrito */
+    font-family: 'League Spartan', sans-serif;  /* fonte personalizada */
+}
+
+/* ===== SUBTÍTULO ABAIXO DO BEM-VINDO ===== */
+.subtitulo {
+    font-size: 20px;                            /* texto pequeno */
+    color: #666666;                             /* cinza médio */
+    margin-bottom: 25px;                        /* espaço abaixo */
+    font-family: 'League Spartan', sans-serif;  /* fonte personalizada */
+    line-height: 1.5;                           /* espaço entre linhas */
+}
+
+/* ===== LABELS DOS CAMPOS (Email ou Numero / Senha) ===== */
+.numero_ou_email,
+.senha_bem_vindo {
+    font-size: 18px;                            /* texto médio */
+    color: #000000;                             /* preto */
+    margin-bottom: 8px;                         /* espaço abaixo do label */
+    font-weight: bold;                          /* negrito */
+    font-family: 'League Spartan', sans-serif;  /* fonte personalizada */
+    align-self: flex-start;                     /* alinha à esquerda */
+}
+
+/* ===== CAMPOS DE INPUT ===== */
+.input_campo {
+    width: 100%;                                /* ocupa toda a largura */
+    padding: 14px 16px;                         /* espaço interno */
+    border: none;                               /* sem borda */
+    border-radius: 30px;                        /* formato pílula */
+    background-color: #FDF5C8;                  /* amarelo bem clarinho */
+    font-size: 18px;                            /* tamanho do texto digitado */
+    font-family: 'League Spartan', sans-serif;  /* fonte personalizada */
+    color: #888888;                             /* cinza para o placeholder */
+    margin-bottom: 18px;                        /* espaço abaixo do campo */
+    box-sizing: border-box;                     /* padding não aumenta a largura */
+    outline: none;                              /* remove borda azul ao clicar */
+}
+
+.telefone_wrapper {
+    width: 100%;
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.telefone_prefixo {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    color: #e95322;
+    pointer-events: none;
+}
+
+.input_telefone {
+    padding-left: 58px;
+    background-color: #FDF5C8;
+    border: 2px solid #FDF5C8;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.input_telefone::placeholder {
+    color: #888888;
+}
+
+/* ===== CAMPO DE SENHA (com ícone de olho) ===== */
+.campo_senha_wrapper {
+    width: 100%;                                /* ocupa toda a largura */
+    position: relative;                         /* para posicionar o ícone dentro */
+    margin-bottom: 5px;                         /* espaço abaixo */
+}
+
+.campo_senha_wrapper .input_campo {
+    margin-bottom: 0;                           /* remove margin pois o wrapper já tem */
+    padding-right: 45px;                        /* espaço para o ícone do olho */
+}
+
+/* ===== ÍCONE DE OLHO (ver/ocultar senha) ===== */
+.icone_olho {
+    position: absolute;                         /* posiciona dentro do wrapper */
+    right: 15px;                                /* 15px da direita */
+    top: 50%;                                   /* centraliza verticalmente */
+    transform: translateY(-50%);  
+    cursor: pointer;                            /* cursor de mãozinha */
+    color: #e95322;                             /* laranja */
+    font-size: 18px;                            /* tamanho do ícone */
+}
+
+/* ===== TEXTO "VER SENHA" ===== */
+
+.container__ver_senha{
+    display: flex;                              /* ativa flexbox */
+    justify-content: flex-end;                   /* alinha à direita */
+}
+
+.ver_senha {
+    font-size: 15px;                            /* texto pequeno */
+    color: #e95322;                             /* laranja */
+                        /* alinha à direita */
+    margin-bottom: 0px;                        /* espaço abaixo */
+    cursor: pointer;                            /* cursor de mãozinha */
+    font-family: 'League Spartan', sans-serif;  /* fonte personalizada */
+    margin-top: 5px;
+}
+
+/* ===== BOTÃO DE LOGIN ===== */
+.button_login {
+    background-color: #e95322;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 60px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'League Spartan', sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    display: block;
+    margin: 60px auto 20px auto; /* 👈 centralização real */
+}
+
+/* ===== SEÇÃO "OUTROS" (Google e Facebook) ===== */
+.outros_login {
+    display: flex;                              /* ativa flexbox */
+    flex-direction: column;                     /* empilha verticalmente */
+    align-items: center;                        /* centraliza */
+    width: 100%;                                /* ocupa toda a largura */
+    margin-bottom: 20px;                        /* espaço abaixo */
+    margin-top: 60px;
+}
+
+.outros_texto {
+    font-size: 13px;                            /* texto pequeno */
+    color: #666666;                             /* cinza */
+    margin-bottom: 10px;                        /* espaço abaixo do texto */
+    font-family: 'League Spartan', sans-serif;  /* fonte personalizada */
+    text-align: center;
+}
+
+.outros_icones {
+    display: flex;                              /* ativa flexbox */
+    gap: 15px;                                  /* espaço entre os ícones */
+}
+
+.icone_social {
+    width: 40px;                                /* tamanho do ícone */
+    height: 40px;                               /* tamanho do ícone */
+    border-radius: 50%;                         /* formato circular */
+    border: 1.5px solid #e95322;               /* borda laranja */
+    background-color: #ffffff;
+    display: flex;                              /* centraliza o ícone dentro */
+    align-items: center;                        /* centraliza verticalmente */
+    justify-content: center;                    /* centraliza horizontalmente */
+    cursor: pointer;                            /* cursor de mãozinha */
+    color: #e95322;                             /* cor do ícone laranja */
+    font-size: 18px;                            /* tamanho do ícone */
+    padding: 0;
+    transition: 0.3s ease;
+}
+
+.icone_social:hover {
+    background-color: #f5cb58;
+    transform: scale(1.1);
+}
+
+.icone_social_img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ===== TEXTO "AINDA NÃO TEM CONTA?" ===== */
+.criar_conta {
+    font-size: 16px;                            /* texto pequeno */
+    color: #666666;                             /* cinza */
+    align-self: center;                         /* centraliza */
+    font-family: 'League Spartan', sans-serif;  /* fonte personalizada */
+}
+
+.criar_conta span {
+    color: #e95322;                             /* laranja no link "Criar conta" */
+    cursor: pointer;                            /* cursor de mãozinha */
+    font-weight: bold;                           /* negrito no link */
+}
+
+/* ===== BOTÃO DE VOLTAR ===== */
+.botao-voltar {
+    position: absolute;                         /* posiciona no topo */
+    top: 20px;                                  /* 20px do topo */
+    left: 10px;                                 /* 20px da esquerda */
+    font-size:45px;                            /* tamanho do ícone de seta */
+    color: #e95322;                             /* laranja */
+    background: none;                          /* sem fundo */
+    border: none;                               /* sem borda */
+    cursor: pointer;                            /* cursor de mãozinha */
+}
+
+
+.button_login:focus,
+.botao-voltar:focus,
+.icone_social:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+button,
+button:focus,
+button:active {
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.botao-voltar:focus,
+.icone_social:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+button,
+button:focus,
+button:active {
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+}
+

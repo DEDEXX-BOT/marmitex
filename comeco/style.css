@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #ec7127;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+}
+
+.logo_inicio { 
+    width: 360px;
+    display: block;
+    margin-bottom: 32px;
+
+}
+
+.button_login,
+.button_cadastro {
+    width: min(280px, calc(100vw - 48px));
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'League Spartan', sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+    outline: none;
+}
+
+.button_login {
+    background-color: #f5cb58;
+    color: #e95322;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.button_login:active {
+    background-color: #f5cb58;
+    transform: scale(1.05);
+    outline: none;
+}
+
+.button_cadastro {
+    background-color: #ffffff;
+    color: #e95322;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.button_cadastro:active {
+    background-color: #f5cb58;
+    transform: scale(1.05);
+    outline: none;
+}
+
+
+.button_login:focus,
+.button_cadastro:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+button,
+button:focus,
+button:active {
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+}
+

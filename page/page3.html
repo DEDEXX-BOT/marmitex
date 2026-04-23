@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARMITEX</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/page/page.style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/img/cafe_page3.jpg" alt="imagem de cafe" class="img_pizza">
+
+        <button class="btn-voltar" type="button" onclick="window.location.href='/page/page2.html'" aria-label="Voltar para a pagina anterior">&#8249;</button>
+
+        <div class="fundo-branco">
+            <div class="bem-vindo_page">Entrega Rápida</div>
+            <p>Receba seu pedido com agilidade e acompanhe tudo com mais tranquilidade. No marmitex, a entrega é pensada para facilitar sua rotina, com praticidade do começo ao fim.</p>
+
+            <button class="btn-proximo" type="button" onclick="window.location.href='/inicio/inicio.html'" aria-label="Ir para a pagina inicial">
+                Começar
+            </button>
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn" title="Voltar ao topo">&uarr;</button>
+
+    <script>
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function() { scrollFunction(); };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        scrollToTopBtn.onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+    </script>
+</body>
+</html>

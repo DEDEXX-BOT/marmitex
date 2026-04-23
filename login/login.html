@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARMITEX</title>
+    <link rel="stylesheet" href="/login/login.style.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <button class="botao-voltar" id="btn-voltar2" type="button" aria-label="Voltar para a pagina inicial">&#8249;</button>
+    <span class="login_inicio"></span>
+
+    <div class="fundo-branco">
+        <span class="bem_vindo">Bem-Vindo</span>
+
+        <p class="subtitulo">
+            Acesse sua conta para continuar. Faca login para acompanhar
+            seus pedidos, salvar suas preferencias e ter uma experiencia
+            mais rapida e personalizada no Marmitex.
+        </p>
+
+        <span class="numero_ou_email">Email ou Numero</span>
+        <input type="text" class="input_campo" id="input-login" placeholder="example@example.com ou (00) 00000-0000" autocomplete="off">
+
+        <span class="senha_bem_vindo">Senha</span>
+        <div class="campo_senha_wrapper">
+            <input type="password" class="input_campo" id="input-senha" placeholder="************" required autocomplete="off">
+            <span class="icone_olho" id="icone-olho">
+                <i class="fa-regular fa-eye-slash"></i>
+            </span>
+        </div>
+
+        <label class="lembrar-login" for="lembrar-login">
+            <span>Lembrar login</span>
+            <input type="checkbox" id="lembrar-login">
+        </label>
+        <span class="ver_senha" id="ver-senha-texto">Ver Senha</span>
+        <button class="button_login" id="botao-login" type="button">Login</button>
+
+        <div class="outros_login">
+            <span class="outros_texto">Outros</span>
+            <div class="outros_icones">
+                <button type="button" class="icone_social" aria-label="Entrar com Google" data-em-breve>
+                    <img class="icone_social_img" src="/img/google.png" alt="Google">
+                </button>
+                <button type="button" class="icone_social" aria-label="Entrar com Facebook" data-em-breve>
+                    <img class="icone_social_img" src="/img/face.png" alt="Facebook">
+                </button>
+                <button type="button" class="icone_social" aria-label="Entrar com Instagram" data-em-breve>
+                    <img class="icone_social_img" src="/img/insta.png" alt="Instagram">
+                </button>
+            </div>
+        </div>
+
+        <span class="criar_conta">
+            Ainda nao tem conta? <span onclick="irParaCadastro()">Criar conta</span>
+        </span>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
