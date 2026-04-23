@@ -42,7 +42,7 @@ http://SEU-IP:3000
 Exemplo:
 
 ```text
-http://192.168.0.15:3000
+http://XXX.XXX.X.XX:3000
 ```
 
 ## Observacoes
