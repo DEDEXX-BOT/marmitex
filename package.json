@@ -1,7 +1,7 @@
 {
   "name": "marmitex",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto Marmitex com Node.js, Express e instrucoes de uso no README.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
